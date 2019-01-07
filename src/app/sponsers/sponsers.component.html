@@ -1,0 +1,27 @@
+
+<!-- <h2>{{sponser.name}} Details</h2>
+<div><span>id: </span>{{sponser.id}}</div>
+<div><span>name: </span>{{sponser.name}}</div> -->
+
+<!-- <div>
+  <label>name:
+    <input [(ngModel)]="sponser.name" placeholder="name">
+  </label>
+</div> -->
+
+<h2>My Sponsers</h2>
+<!-- <ul class="sponsers">
+  <li *ngFor="let s of sponsers" [class.selected]="s === selectedSponser" (click)="onSelect(s)">
+  <span class="badge">{{s.id}}</span> {{s.name}}
+  </li>
+</ul>
+
+<app-sponser-detail [sponser]="selectedSponser"></app-sponser-detail> -->
+
+<ul class="sponsers">
+  <li *ngFor="let sponser of sponsers">
+    <a routerLink="/sponsers/{{sponser.id}}">
+      <span class="badge">{{sponser.id}}</span> {{sponser.name}}
+    </a>
+  </li>
+</ul>

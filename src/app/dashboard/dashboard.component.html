@@ -1,0 +1,8 @@
+<h3>Top Sponsers</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let sponser of sponsers" class="col-1-4" routerLink="/sponsers/{{sponser.id}}">
+    <div class="module sponser">
+      <h4>{{sponser.name}}</h4>
+    </div>
+  </a>
+</div>

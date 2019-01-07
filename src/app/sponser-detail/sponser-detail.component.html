@@ -1,0 +1,10 @@
+<div *ngIf="sponser">
+  <h2>{{sponser.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{sponser.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="sponser.name" placeholder="name">
+    </label>
+  </div>
+</div>
+<button (click)="goBack()">go back</button>
