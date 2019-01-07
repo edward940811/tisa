@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Sponser } from './sponser';
+import { Sponser_Test } from './sponser_test';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,8 @@ import { Sponser } from './sponser';
 })
 export class AppComponent {
   title = 'tisa';
-  localApiUrl: string = 'https://localhost:8080/api/sponsers';
-  SponserList: Sponser[];
+  localApiUrl: string = 'http://localhost:8080/api/sponsers';
+  SponserList: Sponser_Test[];
 
   ngOnInit() {
     this.getAllSponser();
@@ -47,7 +48,7 @@ export class AppComponent {
   //     });
   // }
   getAllSponser() {
-      this.http.get<Sponser[]>(this.localApiUrl)
+      this.http.get<Sponser_Test[]>(this.localApiUrl)
       .subscribe(
         response => {
           this.SponserList = response;
@@ -59,14 +60,6 @@ export class AppComponent {
           //     type: '審核',
           //     name: '阿尼',
           //     date: new Date(2017, 12, 23),
-          //     notify: true
-          //   },
-          //   {
-          //     id: 2,
-          //     setTop: false,
-          //     type: '審核',
-          //     name: '哆啦A夢',
-          //     date: new Date(2018, 11, 11),
           //     notify: true
           //   }
           // );
